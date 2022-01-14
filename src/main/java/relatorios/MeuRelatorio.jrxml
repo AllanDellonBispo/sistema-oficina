@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MeuRelatorio" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="13c0555e-80b0-49fc-8200-064d23be13d9">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM insumos]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nome"/>
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="insumos"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="preco" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="preco"/>
+		<property name="com.jaspersoft.studio.field.label" value="preco"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="insumos"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="quantidadeTotal" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="quantidadeTotal"/>
+		<property name="com.jaspersoft.studio.field.label" value="quantidadeTotal"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="insumos"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fornecedor_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="fornecedor_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="fornecedor_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="insumos"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="30" width="190" height="30" uuid="66edb1ae-b01f-4d9f-bcfc-3335a05f4810">
+					<property name="com.jaspersoft.studio.element.name" value="RR"/>
+				</reportElement>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RRCAR-GARAGE]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="141" height="30" uuid="344b8729-99e2-44c1-a104-771a5e511265">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5402aaa2-43eb-43f0-8fd6-4689d97ffd8a"/>
+				</reportElement>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="0" width="138" height="30" uuid="09bb4a41-9823-4e8b-b918-273cc81a25e2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4efd5903-cad2-4550-a1be-d15a1f9e0d69"/>
+				</reportElement>
+				<text><![CDATA[preco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="138" height="30" uuid="0bc16709-4518-4130-96ac-cb3047fc262a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9d731b20-d0cd-4b12-b48c-edbf3d52507f"/>
+				</reportElement>
+				<text><![CDATA[quantidadeTotal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="0" width="138" height="30" uuid="aaa570e3-7ca4-4ead-9dda-428ba36807de">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="47c247b3-8090-4734-9d8e-2bb25cc508f3"/>
+				</reportElement>
+				<text><![CDATA[fornecedor_id]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="141" height="30" uuid="818c4e82-ace0-4c94-8043-a866a317f593">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5402aaa2-43eb-43f0-8fd6-4689d97ffd8a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="0" width="138" height="30" uuid="121a4e89-3ea6-4d62-8c7c-2359c9a7b61b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4efd5903-cad2-4550-a1be-d15a1f9e0d69"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{preco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="138" height="30" uuid="8edc366e-8890-4276-b9bc-592f5faf29c3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9d731b20-d0cd-4b12-b48c-edbf3d52507f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{quantidadeTotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="0" width="138" height="30" uuid="6cf750e7-88bb-40b0-963e-7c5f58640e1e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="47c247b3-8090-4734-9d8e-2bb25cc508f3"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fornecedor_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="49" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="21" width="100" height="30" uuid="cd7338e3-ef1b-498d-b34b-8555af0ec0b1"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

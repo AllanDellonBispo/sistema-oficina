@@ -160,7 +160,7 @@ public class TelaLogin extends javax.swing.JFrame {
                 LabelPorcentagem.setText(String.valueOf(j)+"%");
                 BarProgresso.setValue(100);
                 try {            
-                    Thread.sleep(70);
+                    Thread.sleep(5);
                 } catch (Exception e) {
                     System.out.println(e);
         } 
@@ -203,6 +203,8 @@ public class TelaLogin extends javax.swing.JFrame {
         
         if(count == (atendenteController.mostrarTodos().size() + administradorController.mostrarTodos().size())){
             JOptionPane.showInternalMessageDialog(null, "Senha ou login incorretos. Tente novamente.");
+            CampoLogin.setText("");
+            CampoSenha.setText("");
             LoadingLabel.setVisible(false);
             LabelPorcentagem.setVisible(false);
             BarProgresso.setVisible(false);

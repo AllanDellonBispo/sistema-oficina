@@ -127,7 +127,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
 
         jLabel13.setText("CEP :");
 
-        jLabel14.setText("N° :");
+        jLabel14.setText("N° Casa.:");
 
         jLabel16.setText("ATENDENTE :");
 
@@ -284,7 +284,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         c.setCep(CampoCep.getText());
         c.setDataCadastro(localDateTime);
         c.setDataDeNascimento(localDateTime);
-        c.setNomeAtendente(CampoAtendente.getName());
+        c.setNomeAtendente((String) CampoAtendente.getSelectedItem());
         c.setNumeroDaCasa(Integer.parseInt(CampoNumeroCasa.getValue().toString()));
         cc.adiciona(c);
         this.dispose();

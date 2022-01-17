@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
+import model.Veiculo;
 
 /**
  *
@@ -42,7 +43,7 @@ public class TelaListaVeiculo extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        CampoBuscar = new javax.swing.JTextField();
+        CampoBuscarPlaca = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         CampoId = new javax.swing.JSpinner();
 
@@ -139,7 +140,7 @@ public class TelaListaVeiculo extends javax.swing.JFrame {
                                 .addGap(27, 27, 27)
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CampoBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(CampoBuscarPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(108, 108, 108)
@@ -166,7 +167,7 @@ public class TelaListaVeiculo extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel2)
-                        .addComponent(CampoBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(CampoBuscarPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(CampoId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(22, 22, 22))
@@ -234,9 +235,37 @@ public class TelaListaVeiculo extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-    lerTabelaBusca(CampoBuscar.getText());
-//    VeiculoController veiculoController = new VeiculoController();
-//    veiculoController.buscarPorPlaca(CampoBuscar.getText());
+    
+        int count = 0;
+        VeiculoController veiculoController = new VeiculoController();
+        Veiculo veiculo = new Veiculo();
+        for(int i = 0; i < veiculoController.mostrarTodos().size(); i++){
+            if(veiculoController.mostrarTodos().get(i).getPlaca().equals(CampoBuscarPlaca.getText())){
+                veiculo = veiculoController.mostrarTodos().get(i);
+         DefaultTableModel modelo = (DefaultTableModel)Tabela.getModel();
+         modelo.setNumRows(0);
+         VeiculoController vc = new VeiculoController();
+ 
+   
+            modelo.addRow(new Object[]{
+                    
+                       veiculo.getId(),
+                       veiculo.getNome(),
+                       veiculo.getTipo(),
+                       veiculo.getAno(),
+                       veiculo.getCor(),
+                       veiculo.getMarca(),
+                       veiculo.getPlaca(),
+                       veiculo.getProprietario(),
+                    });
+            }else{
+                count++;
+            }
+        }
+        
+        if(count == veiculoController.mostrarTodos().size()){
+            JOptionPane.showMessageDialog(null, "Placa não encontrada");
+        }
        
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -259,7 +288,7 @@ public class TelaListaVeiculo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField CampoBuscar;
+    private javax.swing.JTextField CampoBuscarPlaca;
     private javax.swing.JSpinner CampoId;
     private javax.swing.JTable Tabela;
     private javax.swing.JButton jButton1;

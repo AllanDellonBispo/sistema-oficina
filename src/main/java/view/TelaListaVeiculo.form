@@ -43,7 +43,7 @@
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="CampoBuscar" min="-2" pref="123" max="-2" attributes="0"/>
+                              <Component id="CampoBuscarPlaca" min="-2" pref="123" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jButton3" min="-2" pref="115" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
@@ -76,7 +76,7 @@
                       <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton3" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="CampoBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="CampoBuscarPlaca" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton4" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                       <Component id="CampoId" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -228,7 +228,7 @@
         <Property name="text" type="java.lang.String" value="PLACA :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="CampoBuscar">
+    <Component class="javax.swing.JTextField" name="CampoBuscarPlaca">
     </Component>
     <Component class="javax.swing.JButton" name="jButton4">
       <Properties>

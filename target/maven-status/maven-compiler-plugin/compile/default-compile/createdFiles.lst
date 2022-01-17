@@ -6,7 +6,6 @@ controller\ContasPagarController.class
 view\TelaPrincipal$11.class
 view\TelaListaFornecedor$2.class
 view\TelaAtualizaCliente$1.class
-view\TelaAtualizaFornecedor$7.class
 view\TelaCadastroVeiculo$2.class
 Principal.class
 view\TelaLogin$2.class
@@ -22,6 +21,7 @@ view\TelaAtualizaFornecedor$2.class
 view\TelaPrincipalAtendente$hora.class
 controller\OrcamentoController.class
 view\TelaAtualizaVeiculo$8.class
+Fabrica\GeraRelatorio.class
 view\TelaCadastraCategoria$4.class
 view\TelaAtualizaVeiculo$2.class
 view\TelaCadastroOrcamento$4.class
@@ -92,11 +92,11 @@ view\TelaPrincipalAtendente$1.class
 view\TelaAtualizaAtendente.class
 relatorios\TesteRelatorio.class
 view\TelaAtualizaAtendente$3.class
+view\TelaListaInsumo$4.class
 view\TelaPrincipalAtendente$10.class
 view\TelaCadastroVeiculo$5.class
 view\TelaAtualizaVeiculo$3.class
 view\TelaAtualizaCliente$7.class
-view\TelaAtualizaFornecedor$6.class
 controller\CaixaController.class
 view\TelaAtualizaAtendente$2.class
 controller\ColaboradorController.class
@@ -126,6 +126,7 @@ view\TelaPrincipalAtendente$5.class
 view\TelaAtualizaCliente.class
 view\TelaPrincipalAtendente$4.class
 view\TelaAtualizaInsumo$4.class
+Fabrica\teste.class
 view\TelaCadastraCategoria$1.class
 view\TelaCadastroOrcamento$7.class
 view\TelaCaixa$1.class
@@ -138,7 +139,6 @@ view\TelaListaCliente$1.class
 view\TelaPrincipal$3.class
 view\TelaAtualizaFornecedor$4.class
 view\TelaCadastroAtendente$5.class
-view\TelaListaFornecedor$4.class
 view\TelaAtualizaCliente$3.class
 view\TelaAtualizaServico$2.class
 view\TelaCadastroOrcamento$6.class
@@ -155,7 +155,6 @@ view\TelaCadastraCategoria$2.class
 view\TelaListaCliente$2.class
 view\TelaAtualizaInsumo$5.class
 view\TelaAtualizaServico$3.class
-view\TelaListaFornecedor$5.class
 view\TelaListaAtendente$2.class
 view\TelaCadastroInsumo$2.class
 view\TelaCadastroCliente$5.class

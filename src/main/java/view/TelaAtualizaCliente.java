@@ -39,8 +39,6 @@ public class TelaAtualizaCliente extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Tabela = new javax.swing.JTable();
         jButton3 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        CampoId = new javax.swing.JSpinner();
         CampoCPF = new javax.swing.JFormattedTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -60,7 +58,7 @@ public class TelaAtualizaCliente extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         CampoNome = new javax.swing.JTextField();
         CampoAtendente = new javax.swing.JTextField();
-        CampoId2 = new javax.swing.JSpinner();
+        CampoId = new javax.swing.JSpinner();
         jLabel8 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         CampoNascimento = new javax.swing.JTextField();
@@ -115,10 +113,6 @@ public class TelaAtualizaCliente extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-
-        jLabel1.setText("ID :");
-
-        CampoId.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
 
         try {
             CampoCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
@@ -186,7 +180,7 @@ public class TelaAtualizaCliente extends javax.swing.JFrame {
 
         jLabel7.setText("NOME :");
 
-        CampoId2.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        CampoId.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
 
         jLabel8.setText("ID :");
 
@@ -207,10 +201,6 @@ public class TelaAtualizaCliente extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(CampoId, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -248,7 +238,7 @@ public class TelaAtualizaCliente extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel8)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(CampoId2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(CampoId, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
@@ -284,7 +274,7 @@ public class TelaAtualizaCliente extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CampoId2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CampoId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
@@ -316,9 +306,7 @@ public class TelaAtualizaCliente extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(CampoId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22))
         );
 
@@ -401,7 +389,7 @@ public class TelaAtualizaCliente extends javax.swing.JFrame {
         ClienteController cc =  new ClienteController();
         Cliente c = new Cliente();
         try {
-        c = cc.buscarId(Integer.parseInt(CampoId2.getValue().toString()));
+        c = cc.buscarId(Integer.parseInt(CampoId.getValue().toString()));
         CampoNome.setText(c.getNome());
         CampoCPF.setText(c.getCpf());
         CampoEmail.setText(c.getEmail());
@@ -439,7 +427,6 @@ public class TelaAtualizaCliente extends javax.swing.JFrame {
     private javax.swing.JTextField CampoEmail;
     private javax.swing.JTextField CampoEndereco;
     private javax.swing.JSpinner CampoId;
-    private javax.swing.JSpinner CampoId2;
     private javax.swing.JTextField CampoNascimento;
     private javax.swing.JTextField CampoNome;
     private javax.swing.JTextField CampoNumeroCasa;
@@ -449,7 +436,6 @@ public class TelaAtualizaCliente extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

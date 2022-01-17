@@ -61,6 +61,7 @@ public class TelaCadastroOrcamento extends javax.swing.JFrame {
     
     ArrayList<Servico> servicos = new ArrayList<>();
     ArrayList<Insumo> insumos = new ArrayList<>();
+    ArrayList<Integer> qtdInsumos = new ArrayList<>();
     
      public void lerTabela(){
         
@@ -493,7 +494,28 @@ public class TelaCadastroOrcamento extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
+        InsumoController insumoController = new InsumoController();
+        Insumo insumo = new Insumo();
+        
+        try {
+            
+            for(int i = 0; i < insumos.size(); i++){
+            for(int j = 0; j < insumoController.mostrarTodos().size(); j++){
+                   if(insumos.size() > 0 && insumoController.mostrarTodos().get(j).getNome().equals(insumos.get(i).getNome())){
+                       insumo = insumoController.buscarId(insumoController.mostrarTodos().get(j).getId());
+                       for(int k = 0; k <= qtdInsumos.size(); k++){
+                           insumo.setQuantidadeTotal(insumoController.mostrarTodos().get(j).getQuantidadeTotal()-qtdInsumos.get(k));
+                           insumo.setSolicitacoes(insumoController.mostrarTodos().get(j).getSolicitacoes()+qtdInsumos.get(k));
+                           insumoController.atualiza(insumo);
+                       }
+                }
+            }
+            
+        }
+        
+        } catch (Exception e) {
+        }
+        
         CaixaController caixaController = new CaixaController();
         caixaController.atualizaCaixaPositivo(Float.parseFloat(CampoResultado.getText().toString()));
         JOptionPane.showMessageDialog(null, "Ordem de serviço cadastrada com sucesso.");
@@ -551,7 +573,22 @@ public class TelaCadastroOrcamento extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void ButtonZerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonZerarActionPerformed
-       
+        CampoResultado.setText(String.valueOf(Float.parseFloat(CampoResultado.getText()) - Float.parseFloat(CampoResultadoMO.getText())));
+        CampoTempo.setText("");
+        CampoResultadoMO.setText("0");
+        servicos.clear();
+        DefaultTableModel modelo = (DefaultTableModel)TabelaServico.getModel();
+            modelo.setNumRows(0);
+            
+                for(int i = 0; i< servicos.size(); i++){
+                    modelo.addRow(new Object[]{
+                    
+                       servicos.get(i).getNome(),
+                       servicos.get(i).getDescricao(),
+                       "R$"+servicos.get(i).getPreco(),
+                        
+                    });
+                }
 
     }//GEN-LAST:event_ButtonZerarActionPerformed
 
@@ -574,6 +611,9 @@ public class TelaCadastroOrcamento extends javax.swing.JFrame {
         insumo.setPreco(precoInsumo * Float.parseFloat(CampoQuantidadeInsumo.getValue().toString()));
         insumos.add(insumo);
         
+        qtdInsumos.add(Integer.parseInt(CampoQuantidadeInsumo.getValue().toString()));
+        
+        
          DefaultTableModel modelo = (DefaultTableModel)TabelaInsumo.getModel();
             modelo.setNumRows(0);
             
@@ -593,7 +633,23 @@ public class TelaCadastroOrcamento extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void ButtonZerar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonZerar1ActionPerformed
-
+        CampoResultado.setText(String.valueOf(Float.parseFloat(CampoResultado.getText()) - Float.parseFloat(CampoResultadoPR.getText())));
+        CampoQuantidadeInsumo.setValue(0);
+        CampoResultadoPR.setText("0");
+        insumos.clear();
+        DefaultTableModel modelo = (DefaultTableModel)TabelaInsumo.getModel();
+            modelo.setNumRows(0);
+            
+                for(int i = 0; i< insumos.size(); i++){
+                    modelo.addRow(new Object[]{
+                    
+                       insumos.get(i).getNome(),
+                       insumos.get(i).getDescricao(),
+                       "R$"+insumos.get(i).getPreco(),
+                        
+                    });
+                }
+                
     }//GEN-LAST:event_ButtonZerar1ActionPerformed
 
     private void CampoInsumoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoInsumoActionPerformed

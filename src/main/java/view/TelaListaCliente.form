@@ -25,11 +25,6 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="547" max="32767" attributes="0"/>
-              <Component id="jLabel10" min="-2" pref="314" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="527" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
               <Component id="jButton1" min="-2" pref="115" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
@@ -42,8 +37,13 @@
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane1" max="32767" attributes="0"/>
+              <Component id="jScrollPane1" pref="1368" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jLabel10" min="-2" pref="338" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="503" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -116,7 +116,7 @@
                 <Column editable="false" title="CEP" type="java.lang.Object"/>
                 <Column editable="false" title="N&#xb0; CASA" type="java.lang.Object"/>
                 <Column editable="false" title="ATENDENTE" type="java.lang.Object"/>
-                <Column editable="false" title="DATA" type="java.lang.Object"/>
+                <Column editable="false" title="DATA CADASTRO" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">

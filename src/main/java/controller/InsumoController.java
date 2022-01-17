@@ -54,6 +54,19 @@ public class InsumoController {
         entityManagerFactory.close();
 
     }
+    
+    //Função para atualizar a entidade
+    public void atualizaQuantidade(Insumo insumo) {
+        entityManager.detach(insumo);
+        entityManager.getTransaction().begin();
+        //aterações ex: atendete.set...
+        entityManager.merge(insumo);
+        entityManager.getTransaction().commit();
+        JOptionPane.showMessageDialog(null,"Insumo alterado com sucesso!");
+        entityManager.close();
+        entityManagerFactory.close();
+
+    }
 
     public void vender(int id, int quantidadePedida){
         Insumo insumo = entityManager.find(Insumo.class, id);

@@ -29,12 +29,10 @@ public class TelaAtualizaVeiculo extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         Tabela = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        CampoBuscar = new javax.swing.JTextField();
+        CampoBuscarPlaca = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
-        CampoId = new javax.swing.JSpinner();
         CampoPlaca = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -49,7 +47,7 @@ public class TelaAtualizaVeiculo extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        CampoId2 = new javax.swing.JSpinner();
+        CampoId = new javax.swing.JSpinner();
         jButton5 = new javax.swing.JButton();
         CampoAno = new javax.swing.JTextField();
         CampoTipo = new javax.swing.JTextField();
@@ -105,8 +103,6 @@ public class TelaAtualizaVeiculo extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("ID :");
-
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton3.setText("BUSCAR");
         jButton3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -126,8 +122,6 @@ public class TelaAtualizaVeiculo extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-
-        CampoId.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
 
         jLabel3.setText("PROPRIETÁRIO :");
 
@@ -163,7 +157,7 @@ public class TelaAtualizaVeiculo extends javax.swing.JFrame {
 
         jLabel5.setText("ID :");
 
-        CampoId2.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+        CampoId.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton5.setText("BUSCAR");
@@ -194,14 +188,10 @@ public class TelaAtualizaVeiculo extends javax.swing.JFrame {
                                 .addGap(27, 27, 27)
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CampoBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(CampoBuscarPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(108, 108, 108)
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CampoId, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(258, 258, 258)
                                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(91, 91, 91))))
             .addGroup(layout.createSequentialGroup()
@@ -233,7 +223,7 @@ public class TelaAtualizaVeiculo extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(CampoId2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(CampoId, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
@@ -263,7 +253,7 @@ public class TelaAtualizaVeiculo extends javax.swing.JFrame {
                 .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(CampoId2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CampoId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -292,12 +282,10 @@ public class TelaAtualizaVeiculo extends javax.swing.JFrame {
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel1)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel2)
-                        .addComponent(CampoBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(CampoId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(CampoBuscarPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(22, 22, 22))
         );
 
@@ -377,7 +365,37 @@ public class TelaAtualizaVeiculo extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-
+ 
+        int count = 0;
+        VeiculoController veiculoController = new VeiculoController();
+        Veiculo veiculo = new Veiculo();
+        for(int i = 0; i < veiculoController.mostrarTodos().size(); i++){
+            if(veiculoController.mostrarTodos().get(i).getPlaca().equals(CampoBuscarPlaca.getText())){
+                veiculo = veiculoController.mostrarTodos().get(i);
+         DefaultTableModel modelo = (DefaultTableModel)Tabela.getModel();
+         modelo.setNumRows(0);
+         VeiculoController vc = new VeiculoController();
+ 
+   
+            modelo.addRow(new Object[]{
+                    
+                       veiculo.getId(),
+                       veiculo.getNome(),
+                       veiculo.getTipo(),
+                       veiculo.getAno(),
+                       veiculo.getCor(),
+                       veiculo.getMarca(),
+                       veiculo.getPlaca(),
+                       veiculo.getProprietario(),
+                    });
+            }else{
+                count++;
+            }
+        }
+        
+        if(count == veiculoController.mostrarTodos().size()){
+            JOptionPane.showMessageDialog(null, "Placa não encontrada");
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -397,7 +415,7 @@ public class TelaAtualizaVeiculo extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         
         VeiculoController vc = new VeiculoController();
-        Veiculo v = vc.buscarId(Integer.parseInt(CampoId2.getValue().toString()));
+        Veiculo v = vc.buscarId(Integer.parseInt(CampoId.getValue().toString()));
         try {
 
             
@@ -433,10 +451,9 @@ public class TelaAtualizaVeiculo extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField CampoAno;
-    private javax.swing.JTextField CampoBuscar;
+    private javax.swing.JTextField CampoBuscarPlaca;
     private javax.swing.JTextField CampoCor;
     private javax.swing.JSpinner CampoId;
-    private javax.swing.JSpinner CampoId2;
     private javax.swing.JTextField CampoMarca;
     private javax.swing.JTextField CampoNomeCarro;
     private javax.swing.JTextArea CampoObservacoes;
@@ -449,7 +466,6 @@ public class TelaAtualizaVeiculo extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
